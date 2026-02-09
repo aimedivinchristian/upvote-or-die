@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.png" />
+<link rel="shortcut icon" href="assets/favicon.ico" />
+
+  <title>Upvote or Die</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Upvote or Die</h1>
+    <p>Today’s Choice</p>
+  </header>
+
+  <main>
+    <main>
+    <!-- Question -->
+    <section id="question-section">
+      <h2 id="question-text">Loading...</h2>
+
+      <div class="options">
+        <button id="optionA">Option A</button>
+        <button id="optionB">Option B</button>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results-section" class="hidden">
+      <p id="resultA">A: 0%</p>
+      <p id="resultB">B: 0%</p>
+    </section>
+
+    <!-- Comments -->
+    <section id="comments-section" class="hidden">
+      <h3>Comments</h3>
+
+      <input type="text" id="comment-input" placeholder="Drop your take..." />
+      <button id="post-comment">Post</button>
+
+      <ul id="comment-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p id="countdown">New choice drops in 24h</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
+<!-- Developed by Space-D -->

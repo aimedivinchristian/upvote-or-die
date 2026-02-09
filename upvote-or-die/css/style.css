@@ -1,0 +1,252 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+}
+
+body {
+  background-color: #121212;
+  color: #fff;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px 40px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #ff4500; /* Reddit orange */
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+  text-shadow: 0 0 10px #ff4500aa;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #bbb;
+  font-weight: 600;
+}
+
+/* Question Section */
+#question-section {
+  background: #1f1f1f;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #ff450055;
+  text-align: center;
+  user-select: text;
+}
+
+#question-text {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.3;
+  color: #fff;
+}
+
+/* Options */
+.options {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+button {
+  flex: 1;
+  background-color: #2a2a2a;
+  border: 2px solid #444;
+  color: #eee;
+  font-size: 1.1rem;
+  padding: 16px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+/* Button click animation */
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 12px #ff4500aa;
+  transition: transform 0.1s ease;
+}
+
+
+button:hover:not(:disabled) {
+  background-color: #ff4500;
+  color: #fff;
+  border-color: #ff4500;
+  box-shadow: 0 0 8px #ff4500aa;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Results Section */
+#results-section {
+  margin-top: 30px;
+  background: #222;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 0 12px #ff450033;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  user-select: none;
+}
+
+#results-section p {
+  flex: 1;
+  text-align: center;
+  color: #ffb374;
+}
+
+/* Comments Section */
+#comments-section {
+  margin-top: 40px;
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px #ff450033;
+}
+
+#comments-section h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ff4500;
+  text-align: center;
+  user-select: none;
+}
+
+#comment-input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #333;
+  color: #eee;
+  margin-bottom: 12px;
+  transition: background 0.3s ease;
+}
+
+#comment-input:focus {
+  outline: none;
+  background: #444;
+  box-shadow: 0 0 8px #ff4500aa;
+}
+
+#post-comment {
+  width: 100%;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff4500;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+#post-comment:hover {
+  background-color: #e03e00;
+}
+
+#comment-list {
+  margin-top: 20px;
+  list-style-type: none;
+  max-height: 200px;
+  overflow-y: auto;
+  user-select: text;
+  scrollbar-width: thin;
+  scrollbar-color: #ff4500 #2a2a2a;
+}
+
+#comment-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+#comment-list::-webkit-scrollbar-thumb {
+  background-color: #ff4500;
+  border-radius: 4px;
+}
+
+/* Each comment item */
+#comment-list li {
+  background: #2a2a2a;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ddd;
+  user-select: text;
+}
+
+#comment-list li button {
+  background: transparent;
+  border: none;
+  color: #ffb374;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0;
+  user-select: none;
+}
+
+#comment-list li button:hover {
+  color: #ff4500;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  user-select: none;
+}
+
+
+/* Responsive */
+@media (max-width: 480px) {
+  #question-text {
+    font-size: 1.4rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  #results-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #comment-list {
+    max-height: 150px;
+  }
+}
+
+
+  /* Devoloped by space-D */
